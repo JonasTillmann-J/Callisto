@@ -1,1 +1,0 @@
-console.log("JavaScrip Rodando -- RecSen Senha ativo")
