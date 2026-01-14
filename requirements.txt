@@ -1,0 +1,30 @@
+# Core
+Flask==3.0.0
+Werkzeug==3.0.1
+
+# ORM e Banco de Dados
+SQLAlchemy==2.0.25
+Flask-SQLAlchemy==3.1.1
+alembic==1.13.1
+
+# Segurança / Autenticação
+bcrypt==4.1.2
+Flask-Bcrypt==1.0.1
+Flask-JWT-Extended==4.6.0
+python-dotenv==1.0.1
+
+# Logs
+loguru==0.7.2
+
+# API Gemini (Google Generative AI)
+google-generativeai==0.4.1
+
+# Validação e Serialização
+marshmallow==3.20.2
+Flask-Marshmallow==1.2.1
+
+# Servidor de Produção
+gunicorn==21.2.0
+
+# CORS (caso tenha front separado)
+Flask-Cors==4.0.0
