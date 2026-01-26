@@ -26,29 +26,6 @@ class Usuario(base):
     Senha_usuario = Column(String, nullable = False) 
     Afiliacao_usuario = Column(String, nullable = False)
 
-class Chat(base):
-    __tablename__ = 'chat'
-    ID_chat = Column(Integer, primary_key=True)
-    ID_usuario = Column(Integer, ForeignKey('usuario.ID_usuario'), nullable=False)
-    Data_criacao = Column(DateTime, default = datetime.utcnow)
-    Titulo_chat = Column(String, nullable=True)
-
-class Mensagem(base):
-    __tablename__ = 'mensagem'
-
-    ID_mensagem = Column(Integer, primary_key=True)
-    ID_chat = Column(Integer, ForeignKey('chat.ID_chat'), nullable=False)
-
-    # quem enviou
-    Papel = Column(
-        Enum('user', 'assistant', 'system', name='papel_mensagem'),
-        nullable=False
-    )
-
-    Conteudo = Column(Text, nullable=False)
-
-    Ordem = Column(Integer, nullable=False)
-    Data_envio = Column(DateTime, default=datetime.utcnow)
 
 if __name__ == '__main__':
     base.metadata.create_all(engine)
